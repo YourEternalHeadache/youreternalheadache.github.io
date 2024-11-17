@@ -27,7 +27,6 @@
 	poland = document.getElementById("poland").value;
 	scotland = document.getElementById("scotland").value;
 	none = document.getElementById("none").value;
-	alert(
     }
   </script>
   </head>
