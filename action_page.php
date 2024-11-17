@@ -4,7 +4,30 @@
   <script type="text"/javascript">
     function GatherInfo()
     {
-
+	first = document.getElementById("fname").value;
+	last = document.getElementById("lname").value;
+	age = parseInt(document.getElementById("age").value);
+	phone = parseInt(document.getElementById("pnum").value);
+	email = document.getElementById("email").value;
+	male = document.getElementById("male").value;
+	female = document.getElementById("female").value;
+	other = document.getElementById("other").value;
+	yes = document.getElementById("yes").value;
+	no = document.getElementById("no").value;
+	denmark = document.getElementById("denmark").value;
+	germany = document.getElementById("germany").value;
+	england = document.getElementById("england").value;
+	france = document.getElementById("france").value;
+	spain = document.getElementById("spain").value;
+	italy = document.getElementById("italy").value;
+	switzerland = document.getElementById("switzerland").value;
+	norway = document.getElementById("norway").value;
+	sweden = document.getElementById("sweden").value;
+	finland = document.getElementById("finland").value;
+	poland = document.getElementById("poland").value;
+	scotland = document.getElementById("scotland").value;
+	none = document.getElementById("none").value;
+	alert(
     }
   </script>
   </head>
