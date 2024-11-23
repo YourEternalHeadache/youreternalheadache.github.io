@@ -5,9 +5,17 @@
   <title>The Wonderful Denmark</title>
 </head>
   <h1>The Wonderful Denmark</h1>
-    <body style="background-color: grey;">
-    <b><h2>Welcome to my page about Denmark!</h2></b>
-    <p>I plan to set my page up like this...</p>
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#text_terms">Text/Terms</a>
+  <a href="#Images">Images</a>
+  <a href="#multimedia">Multimedia</a>
+  <a href="links">Links</a>
+  <a href="user_design">User Design</a>
+</div>
+
+<b><h2>Welcome to my page about Denmark!</h2></b>
+    I plan to set my page up like this...
     <h3>History</h3><br>
     <h3>Food</h3><br>
     <h3>Geography</h3><br>
@@ -15,8 +23,9 @@
     <h3>Culture</h3><br>
     <h3>Traditions</h3><br>
     <h3>The Royal Family</h3><br>
-    <br /><br /><br /><br /><br />
-    <h4> About Me</h4>
+    <br />
+
+<h4> About Me</h4>
   <p>Growing up I was always active in a multitude of sports such as Soccer and Track. However, I was always down for a pick game of anything. <br/>
        I had a love for golf as a kid, but we could never afford a good set of clubs, let alone the green fees just to play. <br/>
        I then was looking for a good summer job and a friend recommended that I come caddy with him. Long story short, I fell in love with the game. <br/>
@@ -39,13 +48,6 @@
     <a href= "https://www.youtube.com/watch?v=fwRiukSgcFg"> A quick history of Denmark </a><br />
     <a href= "https://en.wikipedia.org/wiki/Hans_Christian_Andersen"> Hans Christian Andersen a fairy tale author you may have heard of</a>
   <h4>Fill out some information about you if you would like to know more about Denmark!</h4>
-      <script>
-        function CheckInfo()
-          {
-            complete = document.getElementById("beenTo");
-            alert(none);
-          }
-      </script>
 
     <form action="action_page.php" method="post">
       <label for="fname">First name:</label><br>
@@ -58,6 +60,7 @@
       <input type="text" id="pnum" name="pnum"><br>
       <label for="email">E-Mail:</label><br>
       <input type="text" id="email" name="email"><br>
+
      Gender:<br/>
       <input type="radio" id="male" name="gender" value="Male">
       <label for="male">Male</label><br>
