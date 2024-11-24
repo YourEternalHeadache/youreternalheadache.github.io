@@ -123,7 +123,7 @@ to walk outside and wear a winter jacket and see snow again! I have attached two
     const beenToEurope = document.querySelector('input[name="beenToEurope"]:checked')?.value;
 
     const checkboxes = document.querySelectorAll('input[name="beenTo"]:checked');
-    const visitedCountries = Array.from(checkboxes).map(checkbox => checkbox.value);
+    const visitedCountries = Array.from(checkboxes).map(checkbox => checkbox.value).filter(value => value !== "None of the above");
     const numberOfCountries = visitedCountries.length
 
     let report = `<h3>Report</h3>`;
