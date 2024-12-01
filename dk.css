@@ -1,3 +1,7 @@
+body {
+  background-color: bisque;
+}
+
 h1 {
   font-size: 500% ;
 }
@@ -17,8 +21,6 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
-  position: fixed;
   top: 0;
   width: 100%;
   font-size: 110%;
@@ -26,8 +28,10 @@ ul {
 
 li {
   float: left;
+  border-left: 1px solid #bbb;
   border-right: 1px solid #bbb;
   border-bottom: 1px solid #bbb;
+  border-top: 1px solid #bbb;
 }
 
 li a {
@@ -47,7 +51,7 @@ li:last-child {
 }
 
 table th, td {
-  border: 2px, solid;
+  border-style: solid;
   text-align: center;
   border-collapse: collapse;
   padding: 15px;
