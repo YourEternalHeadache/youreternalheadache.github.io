@@ -1,23 +1,10 @@
 h1 {
-  font-family: Lucida Console, "Courier New", "monospace", bold;
   font-size: 500% ;
 }
 
 h2 {
   font-size: 200%;
   text-align: left;
-}
-
-h4 {
-  font-family: Lucida Console, "Courier New", "monospace";
-}
-
-p {
-  font-family: Georgia, "Serif", monospace;
-}
-
-form {
-  font-family: "Lucida Console", "Courier New", monospace, bold;
 }
 
 title {
@@ -58,4 +45,3 @@ li a:hover {
 li:last-child {
   border-right: 1px solid #bbb;
 }
-
