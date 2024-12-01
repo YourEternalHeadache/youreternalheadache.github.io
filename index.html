@@ -131,6 +131,46 @@ home for a month. I was so excited to meet my new family I hadn't met before, an
 
     document.getElementById("report").innerHTML = report;
   });
+</script><br><br>
+
+<script>
+    function calculateNetIncome() {
+        const grossIncome = parseFloat(document.getElementById("income").value);
+        const exchangeRateToDKK = 6.9571;
+        const exchangeRateToUSD = 1 / exchangeRateToDKK;
+        const grossIncomeDKK = grossIncome * exchangeRateToDKK;
+
+        let stateTaxRate = .12;
+        const topTaxRate = .15;
+        const municipalTaxRate = .25;
+        const laborMarketTaxRate = .08;
+        const churchTaxRate = .008;
+
+        if (grossIncome > 35000) {
+            stateTaxRate = 0.0;
+        }
+
+        const stateTax = stateTaxRate * (grossIncomeDKK - 50500);
+        const topTax = topTaxRate * (grossIncomeDKK -50500);
+        const municipalTax = municipalTaxRate * grossIncomeDKK;
+        const laborMarketTax = laborMarketTaxRate * grossIncomeDKK;
+        const churchTax = churchTaxRate * grossIncomeDKK;
+
+        const totalTaxes = stateTax + topTax + municipalTax + laborMarketTax + churchTax;
+
+        const netIncomeDKK = grossIncomeDKK - totalTaxes;
+
+        const netIncomeUSD = netIncomeDKK * exchangeRateToUSD;
+
+        document.getElementById("result").innerHTML = `Net Income in Denmark (after Taxes, in dollars): ${netIncomeUSD.toFixed(2)} USD`;
+    }
 </script>
+   <h4>Net Income Calculator</h4>
+<p>How much would I make after taxes in the US versus Denmark?</p>
+    <label for="income">Enter your income before taxes in dollars:</label>
+    <input type="number" id="income" name="income" step="0.01">
+    <button onclick="calculateNetIncome()">Calculate</button>
+    <p id="result"></p>
+    <p>This result only takes into account taxes. This calculation does not take into account other fixed or variable expenses</p><br><br>
 </body>
 </html>
