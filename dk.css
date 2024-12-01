@@ -1,5 +1,11 @@
 h1 {
   font-family: Lucida Console, "Courier New", "monospace", bold;
+  font-size: 500% ;
+}
+
+h2 {
+  font-size: 200%;
+  text-align: left;
 }
 
 h4 {
@@ -12,4 +18,43 @@ p {
 
 form {
   font-family: "Lucida Console", "Courier New", monospace, bold;
+}
+
+title {
+  color: red;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 110%;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: green;
+}
+
+li:last-child {
+  border-right: 1px solid #bbb;
 }
