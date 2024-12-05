@@ -2,8 +2,8 @@ body {
   background-color: bisque;
 }
 
-h1 {
-  font-size: 500% ;
+#titleOfPage {
+  font-size: 250% ;
 }
 
 h2 {
