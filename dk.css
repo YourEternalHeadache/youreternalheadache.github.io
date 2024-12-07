@@ -61,3 +61,8 @@ table th, td {
 img {
   float: right;
 }
+
+p {
+  font-size: 115%;
+}
+
