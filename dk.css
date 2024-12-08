@@ -16,40 +16,6 @@ title {
   text-align: center;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  top: 0;
-  width: 100%;
-  font-size: 110%;
-}
-
-li {
-  float: left;
-  border-left: 1px solid #bbb;
-  border-right: 1px solid #bbb;
-  border-bottom: 1px solid #bbb;
-  border-top: 1px solid #bbb;
-}
-
-li a {
-  display: block;
-  color: red;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: green;
-}
-
-li:last-child {
-  border-right: 1px solid #bbb;
-}
-
 table th, td {
   border-style: solid;
   text-align: center;
@@ -63,6 +29,19 @@ img {
 }
 
 p {
-  font-size: 115%;
+  font-size: 150%;
 }
 
+h2 {
+  font-size: 300%;
+  text-align: center;
+}
+
+#navBar a.active {
+  background-color: gray;
+   color: red;
+}
+
+#osterby {
+  float: left
+}
