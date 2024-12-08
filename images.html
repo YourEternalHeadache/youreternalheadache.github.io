@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="dk.css">
+    <link rel="stylesheet" href="dk.css">
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="navigationBar.css"
    <br><title>The Wonderful Denmark!</title>
-  <img src="danish_flag.png" alt="danish flag" height="15%" width="15%">
-  <style>
-    img {
-        float: right;
-    }
-  </style>
+    <style>
+        img {
+            float: right;
+        }
+    </style>
 </head>
-<div style="text-align: center;" id="titleOfPage"><h1>The Wonderful Denmark!</h1></div>
 <body>
+<img src="danish_flag.png" alt="danish flag" height="15%" width="15%">
+<div style="text-align: center;" id="titleOfPage"><h1>The Wonderful Denmark!</h1></div>
 <ul id="navBar">
+    <script src="navBarScript.js"></script>
   <li><a class="active" href="index.html">Home</a></li>
   <li><a href="how-to.html">How to speak Danish</a></li>
   <li><a href="text_terms.html">Text/Terms</a></li>
@@ -24,39 +27,39 @@
 </ul>
 
 
-<h4>Here are some pictures of Nyahvn ("New Harbor" in Copenhagen) and Amalienborg (the Royal Family's palace also in Copenhagen).</h4>
+<h2>Images</h2>
+<p>I have been all over Denmark and here are some of the pictures that I took when I went there!</p>
 
 <div class="slideshow-container">
-    <link rel="stylesheet" href="slideshow.css">
     <div class="mySlides fade">
         <div class="NumberText">1/5</div>
-        <img src="Nyhavn.jpg" alt="nyhavn" height="25%" width="15%">
+        <img src="Nyhavn.jpg" alt="nyhavn" style="width:100%">
         <div class="text">Originally named Nyhavn "The New Harbor" by King Christian V as an alternative business port.</div>
     </div>
 
     <div class="mySlides fade">
-        <div class="numbertext">2/5</div>
-        <img src="Amelienborg.jpg" alt="amelienborg" height="25%" width="15%">
-        <div class="text">This is where the all of the Royal Family lives.</div>
+        <div class="numberText">2/5</div>
+        <img src="Amelienborg.jpg" alt="amelienborg" style="width:100%">
+        <div class="text">This is where the all the Royal Family lives.</div>
     </div>
 
     <div class="mySlides fade">
         <div class="numberText">3/5</div>
-        <img src="church.jpg" alt="Fredrik's Kirke" height="25%" width="15%">
+        <img src="church.jpg" alt="Fredrik's Kirke" style="width:100%">
         <div class="text">Fredrik's Kirke (Church) is the church of the Royal Family. This is where they go to get cristened, married, etc.
             Construction began in 1740 but was not completed until 1849.</div>
     </div>
 
     <div class="mySlides fade">
         <div class="numberText">4/5</div>
-        <img src="ableskriver.jpg" alt="Æbleskriver" height="25%" width="15%">
+        <img src="ableskriver.jpg" alt="Æbleskriver" style="width:100%">
         <div class="text">This is my personal favorite Christmas dessert Æbleskriver. I explain this as a Danish pancake ball. They are served with your choice of jam and powdered sugar</div>
     </div>
 
 
     <div class="mySlides fade">
         <div class="numberText">5/5</div>
-        <img src="legoland.jpg" alt="Legoland Billund" height="25%" width="15%">
+        <img src="legoland.jpg" alt="Legoland Billund" style="width:100%">
         <div class="text">I am a big kid so Legoland is one of my favorite places to go to when we go to Denmark. Many people don't know that Lego is a Danish company!</div>
     </div>
 
@@ -70,24 +73,40 @@
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
     <span class="dot" onclick="currentSlide(5)"></span>
+</div>
 
     <script>
-        let slideIndex = 0;
-        showSlides()
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-        function showSlides() {
-            let i;
-            letsldies = document.getElementsByClassName('mySlides');
-            for (i = 0; i < slides.length; i++) {
-                sldies[i].style.display = "none";
-            }
-            slideIndex++
-            if (slideIndex > sldies.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 5000);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
         }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName('mySlides');
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+        setInterval(function (){
+            plusSlides(1);
+        },10000);
     </script>
-</div>
 
 </body>
 </html>

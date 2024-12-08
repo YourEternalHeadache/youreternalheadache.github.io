@@ -1,0 +1,37 @@
+/* navBarStyles.css */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#navBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: red;
+  display: flex;
+  justify-content: space-around;
+}
+
+#navBar li {
+  flex: 1;
+  text-align: center;
+}
+
+#navBar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+#navBar li a:hover {
+  background-color: #111;
+}
+
+#navBar a.active {
+  background-color: gray;
+  color: white;
+}
